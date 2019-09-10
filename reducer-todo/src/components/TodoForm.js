@@ -1,7 +1,7 @@
 import React from "react";
 import {useState} from "react";
 
-function TodoForm(){
+function TodoForm( { addTodo }){
 
     //components can still have local state
     const [todoItem, setTodoItem] = useState("");
@@ -12,8 +12,14 @@ function TodoForm(){
 
     }
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        addTodo(todoItem);
+        setTodoItem(""); //clears the value of input
+    }
+
     return (
-        <form>
+        <form onSubmit = {handleSubmit}>
             <input type = "text" 
                    name = "todoItem" 
                    value = {todoItem} 
