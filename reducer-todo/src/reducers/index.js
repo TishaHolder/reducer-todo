@@ -47,7 +47,13 @@ export function reducer(state, action) {//action is everything in the dispatch c
                    })
                     
                     
-            };            
+            };   
+            
+        case "CLEAR_COMPLETED":
+            return {
+                ...state,
+                todoArray: state.todoArray.filter(todoItem => !todoItem.completed)
+            };
             
         default:
             return state;

@@ -1,7 +1,7 @@
 import React from "react";
 import {useState} from "react";
 
-function TodoForm( { addTodo }){
+function TodoForm( { addTodo, clearCompleted }){
 
     //components can still have local state
     const [todoItem, setTodoItem] = useState("");
@@ -18,6 +18,11 @@ function TodoForm( { addTodo }){
         setTodoItem(""); //clears the value of input
     }
 
+    const handleClearCompleted = (event) => {
+        event.preventDefault();
+        clearCompleted();
+    }
+
     return (
         <form onSubmit = {handleSubmit}>
             <input type = "text" 
@@ -27,7 +32,7 @@ function TodoForm( { addTodo }){
                    onChange = {handleChange}/>
 
             <button type = "submit"> Add To List </button>
-            <button type = "submit">Clear Completed</button>
+            <button type = "submit" onClick = {handleClearCompleted}>Clear Completed</button>
 
         </form>
 

@@ -24,11 +24,15 @@ function App() {
 
   }
 
+  const clearCompleted = (completed) => {
+    dispatch( { type: "CLEAR COMPLETED" });
+  }
+
   return (
     <div className="App">
 
       <TodoList todoArray = {state.todoArray} toggleCompleted = {toggleCompleted} />
-      <TodoForm addTodo = {addTodo} />
+      <TodoForm addTodo = {addTodo} clearCompleted = {clearCompleted} />
      
     </div>
   );
