@@ -14,14 +14,20 @@ function App() {
   const addTodo = (todoItem) => {
 
     //payload and type are just keys inside of an object, we could call them whatever we like
-    dispatch({ type: "ADD_TODO", payload: todoItem });
+    dispatch({ type: "ADD TODO", payload: todoItem });
 
   };
+
+  const toggleCompleted = (todoItemId) => {
+
+    dispatch( { type: "TOGGLE COMPLETED", payload: todoItemId});
+
+  }
 
   return (
     <div className="App">
 
-      <TodoList todoArray = {state.todoArray} />
+      <TodoList todoArray = {state.todoArray} toggleCompleted = {toggleCompleted} />
       <TodoForm addTodo = {addTodo} />
      
     </div>

@@ -27,6 +27,7 @@ function TodoForm( { addTodo }){
                    onChange = {handleChange}/>
 
             <button type = "submit"> Add To List </button>
+            <button type = "submit">Clear Completed</button>
 
         </form>
 
