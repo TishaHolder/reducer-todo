@@ -2,9 +2,30 @@
 export const initialState = {
    todoArray: [
         {
-            item: 'Learn about reducers',
+            item: 'Code',
             completed: false,
             id: 3892987589            
+
+        },
+
+        {
+            item: 'Sleep',
+            completed: false,
+            id: 3892987544            
+
+        },
+
+        {
+            item: 'Eat',
+            completed: false,
+            id: 3892987478            
+
+        },
+
+        {
+            item: 'Repeat',
+            completed: false,
+            id: 389298751276           
 
         }
     ]
