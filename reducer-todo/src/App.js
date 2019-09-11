@@ -1,5 +1,5 @@
 import React, {useReducer} from 'react';
-import {initialState, reducer} from "./reducers/todoReducer.js/index.jscer.js";
+import {initialState, reducer} from "./reducers/todoReducer.js";
 import TodoList from "./components/TodoList.js";
 import TodoForm from "./components/TodoForm.js";
 import logo from './logo.svg';
