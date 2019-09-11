@@ -27,7 +27,8 @@
   width: 100%;
   height: 20%;
   text-align: center;
-  background-color: rgb(71, 161, 250);
+  /*background-color: rgb(71, 161, 250);*/
+  background-color: #5f65e9;
   color: white;
 }
 
@@ -36,10 +37,12 @@
   flex-direction: column;
   width: 100%;
   height: 60%;
-  background-color: rgb(243, 72, 89);
+  /*background-color: rgb(243, 72, 89);*/
+  background-image: linear-gradient(#e383b9, #5f65e9);
   color: white;
   justify-content: flex-start;
   align-items: center;
+  overflow: hidden;
 }
 
 form {
@@ -48,7 +51,8 @@ form {
   align-items: center;
   width: 100%;
   height: 20%;
-  background-color: rgb(71, 161, 250);
+  /*background-color: rgb(71, 161, 250);*/
+  background-color: #e383b9;
 }
 
 input {

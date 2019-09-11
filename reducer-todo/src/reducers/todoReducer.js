@@ -1,4 +1,6 @@
 //state inside of a reducer must be an object
+//export two things - initialState and reducer
+
 export const initialState = {
    todoArray: [
         {
@@ -73,7 +75,7 @@ export function reducer(state, action) {//action is everything in the dispatch c
                 ...state,
                 todoArray: state.todoArray.filter(todoItem => !todoItem.completed)
             };
-            
+        //return state untouched if we don't have a case written for the action that is coming in    
         default:
             return state;
 
